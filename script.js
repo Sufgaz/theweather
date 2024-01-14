@@ -41,4 +41,15 @@ $(document).ready(function () {
         console.log(error);
       });
   }
+   // Function to display today's weather information
+   function displayTodayWeather(weatherData) {
+    // Update the HTML to display the weather information
+    $('#today').html(`
+      <h2>${weatherData.name}, ${weatherData.sys.country}</h2>
+      <p>${dayjs().format('MMMM D, YYYY')}</p>
+      <p>Temperature: ${weatherData.main.temp}°C</p>
+      <p>Humidity: ${weatherData.main.humidity}%</p>
+      <p>Weather: ${weatherData.weather[0].description}</p>
+    `);
+  }
 });
