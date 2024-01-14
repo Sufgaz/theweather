@@ -1,0 +1,77 @@
+/* Body, Header and Button styles*/
+body, h1, h2, h3, p, form, input, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Header Styles */
+  .weather-header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 1em;
+  }
+  
+  /* Container Styles */
+  .container-fluid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  
+  /* Form Styles */
+  .form-label {
+    font-size: 1.2em;
+  }
+  
+  .weather-search {
+    padding: 0.5em;
+    width: 80%;
+  }
+  
+  .search-button {
+    padding: 0.5em 1em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Horizontal Rule Styles */
+  .weather-hr {
+    margin-top: 1em;
+  }
+  
+  /* List Group Styles */
+  .list-group {
+    padding: 1em;
+  }
+  
+  .list-group-item {
+    background-color: #f8f9fa;
+    margin-bottom: 0.2em;
+    padding: 0.5em;
+  }
+  
+  /* Today and Forecast Section Styles */
+  #today, #forecast {
+    background-color: #fff;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+  
+  /* Responsive Styles for Small Devices */
+  @media (max-width: 768px) {
+    .container-fluid {
+      padding: 0.5em;
+    }
+  
+    .col-lg-9 {
+      margin-top: 0.5em;
+    }
+  }
+  
