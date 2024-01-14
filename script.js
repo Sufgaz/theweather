@@ -1,7 +1,6 @@
 $(document).ready(function () {
     //OpenWeatherMap API key
     const apiKey = '6ba3c11c0b5f3f3af090135e1c336ac8';
-    const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   
     //Event listener for the search form
     $('#search-form').submit(function (event) {
@@ -52,4 +51,16 @@ $(document).ready(function () {
       <p>Weather: ${weatherData.weather[0].description}</p>
     `);
   }
-});
+  //Function to display 5 day forcast
+  function getForecast(city, apiKey) {
+    const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  //
+    fetch(forecastURL)
+      .then(response => response.json())
+      .then(forecastData => {
+        displayForecast(forecastData);
+      })
+      .catch(error => {
+        console.log('Error:', error);
+      });
+  }});
