@@ -63,4 +63,19 @@ $(document).ready(function () {
       .catch(error => {
         console.log('Error:', error);
       });
-  }});
+      // Function to display the 5-day forecast
+  function displayForecast(forecastData) {
+    $('#forecast').empty();
+
+    for (let i = 0; i < forecastData.list.length; i += 8) {
+      const forecast = forecastData.list[i];
+
+      $('#forecast').append(`
+        <div class="col-md-2">
+          <h4>${dayjs(forecast.dt_txt).format('MMM D')}</h4>
+          <p>Temp: ${forecast.main.temp}°C</p>
+          <p>Humidity: ${forecast.main.humidity}%</p>
+          <p>Weather: ${forecast.weather[0].description}</p>
+        </div>
+      `);
+  }}}});
